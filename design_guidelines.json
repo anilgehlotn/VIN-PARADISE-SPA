@@ -1,0 +1,156 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury)",
+  "colors": {
+    "background": {
+      "primary": "#080808",
+      "secondary": "#111111"
+    },
+    "text": {
+      "primary": "#EDE5D8",
+      "secondary": "#A39E93"
+    },
+    "accent": {
+      "primary": "#C9A84C",
+      "hover": "#E1C068"
+    },
+    "special": {
+      "whatsapp": "#25D366",
+      "whatsapp_glow": "rgba(37, 211, 102, 0.4)"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "700"]
+    },
+    "body": {
+      "font_family": "DM Sans, sans-serif",
+      "weights": ["400", "500"]
+    }
+  },
+  "layout_and_spacing": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "border_radius": "rounded-none md:rounded-sm",
+    "grid_gap": "gap-8"
+  },
+  "components": {
+    "navbar": "Fixed header. Default transparent, on scroll shifts to bg-[#080808]/90 with backdrop-blur-md and border-b border-white/10. Shrinks padding on scroll. Mobile uses hamburger menu.",
+    "hero": "Min-h-screen. Uses the hero image with an overlay of bg-gradient-to-r from-[#080808]/90 via-[#080808]/50 to-transparent to ensure text readability.",
+    "service_cards": "Dark background (#111111), 1px solid border-white/5, subtle gold glow on hover (hover:border-[#C9A84C]/50 hover:shadow-[0_0_20px_rgba(201,168,76,0.1)]). Image at the top fixed at h-[220px] object-cover. Contains duration tabs and pricing.",
+    "service_modal": "Shadcn Dialog component. Dark background, contains an image slider, benefits list, products used, and what to expect.",
+    "premium_services": "Larger 2-column cards, rich gold accents, elegant typography to differentiate from regular services.",
+    "buttons": "Primary: bg-[#C9A84C] text-[#080808] hover:bg-[#E1C068] transition-colors. Outline: border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C]/10.",
+    "floating_actions": "WhatsApp floating button on bottom-right with an infinite pulse animation using #25D366. Call button floating on bottom-left with gold outline.",
+    "mobile_sticky_bar": "Sticky fixed bar at the bottom of the screen on mobile devices containing quick CTAs (Book Now, Call).",
+    "why_choose_us": "6 feature cards with minimal icons, text-cream, and gold accent for icons.",
+    "gallery": "Bento or masonry grid of 6 images with hover scale effects.",
+    "testimonials": "Cards with deep charcoal background (#111111), gold star ratings, and user avatars."
+  },
+  "media": {
+    "hero": [
+      {
+        "url": "https://images.pexels.com/photos/4974567/pexels-photo-4974567.jpeg",
+        "description": "Modern luxury spa room"
+      }
+    ],
+    "services": [
+      {
+        "url": "https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg",
+        "description": "Hair Styling"
+      },
+      {
+        "url": "https://images.pexels.com/photos/13899864/pexels-photo-13899864.jpeg",
+        "description": "Facial Treatment"
+      },
+      {
+        "url": "https://images.pexels.com/photos/4599405/pexels-photo-4599405.jpeg",
+        "description": "Massage Therapy"
+      },
+      {
+        "url": "https://images.pexels.com/photos/4967906/pexels-photo-4967906.jpeg",
+        "description": "Pedicure Spa"
+      },
+      {
+        "url": "https://images.pexels.com/photos/14615063/pexels-photo-14615063.jpeg",
+        "description": "Hair Spa"
+      },
+      {
+        "url": "https://images.pexels.com/photos/29352013/pexels-photo-29352013.jpeg",
+        "description": "Bridal Makeup"
+      }
+    ],
+    "premium_services": [
+      {
+        "url": "https://images.pexels.com/photos/433626/pexels-photo-433626.jpeg",
+        "description": "Luxury Spa Package"
+      },
+      {
+        "url": "https://images.pexels.com/photos/35341747/pexels-photo-35341747.jpeg",
+        "description": "Premium Bridal Package"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1731336479432-3eb5fdb3ab1c",
+        "description": "Indoor pool"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1769253523308-f7bff35c60b1",
+        "description": "Bathroom tub"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770573319812-14204d94d2b0",
+        "description": "Sauna"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1745327883508-b6cd32e5dde5",
+        "description": "Massage back"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1772986367452-cb32c68b7089",
+        "description": "Bath tub flowers"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1747847470997-73ae2cd1cfaa",
+        "description": "Bride traditional"
+      }
+    ],
+    "about": [
+      {
+        "url": "https://images.pexels.com/photos/6135677/pexels-photo-6135677.jpeg",
+        "description": "Cozy chairs and salon setting"
+      }
+    ],
+    "testimonials": [
+      {
+        "url": "https://images.unsplash.com/photo-1685903772095-f07172808761",
+        "description": "Avatar 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1702482527875-e16d07f0d91b",
+        "description": "Avatar 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1701615004837-40d8573b6652",
+        "description": "Avatar 3"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa",
+        "description": "Avatar 4"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Import Google Fonts: 'Playfair Display' for headings and 'DM Sans' for body text.",
+    "Extend Tailwind configuration with the custom colors defined in this JSON.",
+    "Implement smooth scrolling using CSS scroll-behavior: smooth or Lenis.",
+    "Add 'data-testid' attributes to all interactive elements (buttons, links, modals, form inputs).",
+    "Use Lucide React for icons.",
+    "Implement the Service Modals using Shadcn UI's Dialog primitive. Add a simple image slider mechanism inside.",
+    "Create a pulsing animation in Tailwind (keyframes pulse-glow) for the WhatsApp floating button.",
+    "Ensure mobile responsiveness: hamburger menu for navbar and sticky bottom bar with quick action buttons.",
+    "Use standard <a> or <button> tags with appropriate hrefs for the Contact and Google Map sections."
+  ]
+}
