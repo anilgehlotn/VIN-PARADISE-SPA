@@ -43,9 +43,7 @@ export function AboutUs() {
   return (
     <section data-testid="about-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#0a0a0a]">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-2 animate-fade-in-up">
-          &#x0CA8;&#x0CAE;&#x0CCD;&#x0CAE; &#x0CAC;&#x0C97;&#x0CCD;&#x0C97;&#x0CC6;
-        </h2>
+        <p className="font-heading text-2xl md:text-3xl text-gold/80 mt-2 mb-1">ವಿನ್ ಪ್ಯಾರಡೈಸ್</p>
         <p className="font-heading text-xl md:text-2xl text-cream/80 mt-4 mb-3">Vin Paradise – Where Luxury Meets Care</p>
         <div className="w-20 h-[1px] bg-gold mx-auto mb-8" />
         <p className="font-body text-cream/60 text-sm md:text-base leading-relaxed max-w-3xl mx-auto mb-12">

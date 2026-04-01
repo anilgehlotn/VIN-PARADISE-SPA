@@ -63,6 +63,11 @@ function PremiumCard({ service, onClick }) {
           ))}
         </ul>
 
+        {/* Pricing Disclaimer */}
+        <p className="text-xs font-body text-gold/60 italic text-center pt-1">
+          💬 Prices may vary — call or visit us for exclusive discounts!
+        </p>
+
         {/* CTA Buttons */}
         <div className="flex gap-3 pt-2" onClick={(e) => e.stopPropagation()}>
           <a
@@ -91,11 +96,19 @@ export default function PremiumServices() {
   const [modalService, setModalService] = useState(null);
 
   return (
-    <section id="premium" data-testid="premium-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#161616]">
+    // <section id="premium" data-testid="premium-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#161616]">
+    <section id="premium" data-testid="premium-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#161616] relative">
+  {/* Premium highlight glow */}
+  <div className="absolute inset-0 pointer-events-none border-y border-gold/20" />
+  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-4">Our Premium Services</h2>
-          <p className="font-body text-cream/50 text-base md:text-lg">Exclusive luxury experiences — only at Vin Paradise</p>
+          <span className="inline-block bg-gold/10 border border-gold/40 text-gold text-xs font-body font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase mb-4">⭐ Signature Collection</span>
+<h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-4">Our Premium Services</h2>
+<p className="font-body text-cream/50 text-base md:text-lg">Exclusive luxury experiences — only at Vin Paradise</p>
+          {/* <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-4">Our Premium Services</h2>
+          <p className="font-body text-cream/50 text-base md:text-lg">Exclusive luxury experiences — only at Vin Paradise</p> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

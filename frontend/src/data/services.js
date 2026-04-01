@@ -208,7 +208,7 @@ export const premiumServices = [
     durations: [
       { label: "60 min", price: 5500 },
       { label: "90 min", price: 7000 },
-      { label: "120 min", price: 10000 },
+      // { label: "120 min", price: 10000 },
     ],
     benefits: [
       "Full body detox and cleanse",
@@ -242,7 +242,7 @@ export const premiumServices = [
     durations: [
       { label: "60 min", price: 5800 },
       { label: "90 min", price: 8000 },
-      { label: "120 min", price: 10000 },
+      // { label: "120 min", price: 10000 },
     ],
     benefits: [
       "Improved flexibility and range",
