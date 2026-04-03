@@ -59,8 +59,6 @@ export function Gallery() {
             </div>
           ))}
         </div>
-
-        <CTAButtons prefix="gallery" />
       </div>
 
       {/* Lightbox */}
@@ -117,8 +115,6 @@ export function Testimonials() {
             </div>
           ))}
         </div>
-
-        <CTAButtons prefix="testimonials" />
       </div>
     </section>
   );

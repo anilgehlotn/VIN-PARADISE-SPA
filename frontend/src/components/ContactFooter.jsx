@@ -9,63 +9,98 @@ const WhatsAppIcon = ({ className = "w-4 h-4" }) => (
 
 export function Contact() {
   return (
-    <section id="contact" data-testid="contact-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#0a0a0a]">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-4">Find Us</h2>
+    <section id="contact" data-testid="contact-section" className="py-28 md:py-40 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
+        backgroundImage: `repeating-linear-gradient(45deg, #C9A84C 0px, #C9A84C 1px, transparent 1px, transparent 60px)`,
+      }} />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20 animate-fade-in-up">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-12 bg-gold/40" />
+            <div className="w-1 h-1 rotate-45 bg-gold" />
+            <div className="h-px w-12 bg-gold/40" />
+          </div>
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-cream leading-tight mb-3">
+            Find <span style={{
+              background: "linear-gradient(135deg, #C9A84C 0%, #F0D080 40%, #C9A84C 70%, #A0722A 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}>Us</span>
+          </h2>
+          <p className="font-body text-cream/40 text-sm md:text-base tracking-widest uppercase mt-4">
+            Visit our sanctuary in Bangalore
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Info Cards */}
           <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <MapPin className="w-5 h-5 text-gold mt-1 shrink-0" />
-              <div>
-                <h3 className="font-body text-cream font-medium mb-1">Address</h3>
-                <p className="font-body text-cream/60 text-sm">Vin Paradise Unisex Salon & Spa, Nagarbhavi, Bangalore 560072</p>
+            {/* Address Card */}
+            <div className="group bg-[#111111] border border-gold/20 rounded-lg p-6 hover:border-gold/50 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(201,168,76,0.1)]">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                    <MapPin className="w-6 h-6 text-gold" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-heading text-gold text-lg mb-2">Address</h3>
+                  <p className="font-body text-cream/70 text-sm leading-relaxed">
+                    Vin Paradise Unisex Salon & Spa<br />
+                    Nagarbhavi, Bangalore 560072<br />
+                    Karnataka, India
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <Phone className="w-5 h-5 text-gold mt-1 shrink-0" />
-              <div>
-                <h3 className="font-body text-cream font-medium mb-1">Phone</h3>
-                <a href={`tel:${PHONE}`} className="font-body text-cream/60 text-sm hover:text-gold transition-colors">
-                  {PHONE}
-                </a>
+            {/* Phone Card */}
+            <div className="group bg-[#111111] border border-gold/20 rounded-lg p-6 hover:border-gold/50 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(201,168,76,0.1)]">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                    <Phone className="w-6 h-6 text-gold" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-heading text-gold text-lg mb-2">Phone</h3>
+                  <a href={`tel:${PHONE}`} className="font-body text-cream/70 text-sm hover:text-gold transition-colors duration-300 font-semibold">
+                    {PHONE}
+                  </a>
+                  <p className="font-body text-cream/50 text-xs mt-1">Click to call us directly</p>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <Clock className="w-5 h-5 text-gold mt-1 shrink-0" />
-              <div>
-                <h3 className="font-body text-cream font-medium mb-1">Hours</h3>
-                <p className="font-body text-cream/60 text-sm">Monday – Sunday: 9:00 AM – 9:00 PM</p>
+            {/* Hours Card */}
+            <div className="group bg-[#111111] border border-gold/20 rounded-lg p-6 hover:border-gold/50 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(201,168,76,0.1)]">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                    <Clock className="w-6 h-6 text-gold" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-heading text-gold text-lg mb-2">Operating Hours</h3>
+                  <div className="space-y-1">
+                    <p className="font-body text-cream/70 text-sm">
+                      <span className="text-gold">Monday – Sunday</span><br />
+                      <span className="font-semibold">9:00 AM – 9:00 PM</span>
+                    </p>
+                    <p className="font-body text-cream/50 text-xs mt-2">Open all days • Appointments recommended</p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              <a
-                href={`tel:${PHONE}`}
-                data-testid="contact-call-btn"
-                className="flex items-center justify-center gap-2 px-6 py-3 border border-gold text-gold font-body rounded-full hover:bg-gold/10 transition-colors"
-              >
-                <Phone className="w-4 h-4" /> Call Now
-              </a>
-              <a
-                href={WHATSAPP_DEFAULT}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="contact-whatsapp-btn"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white font-body rounded-full hover:bg-[#20bd5a] transition-colors shadow-[0_0_15px_rgba(37,211,102,0.3)]"
-              >
-                <WhatsAppIcon /> WhatsApp Now
-              </a>
             </div>
           </div>
 
           {/* Map */}
-          <div className="rounded-lg overflow-hidden border border-gold/20 h-[300px] md:h-[350px]">
+          <div className="rounded-xl overflow-hidden border border-gold/20 h-[350px] md:h-[450px] shadow-[0_8px_40px_rgba(201,168,76,0.1)] hover:shadow-[0_12px_50px_rgba(201,168,76,0.15)] transition-shadow duration-300">
             <iframe
               title="Vin Paradise Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.956!2d77.5097!3d12.9614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e42fbfffff%3A0x0!2sNagarbhavi%2C%20Bangalore!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -76,9 +111,13 @@ export function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               data-testid="contact-map"
+              className="w-full h-full"
             />
           </div>
         </div>
+
+        {/* Divider */}
+        <div className="my-16 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       </div>
     </section>
   );
@@ -86,30 +125,56 @@ export function Contact() {
 
 export function FinalCTA() {
   return (
-    <section data-testid="final-cta-section" className="py-20 md:py-28 px-6 md:px-12 lg:px-24 bg-[#111111] relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5" />
+    <section data-testid="final-cta-section" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-[#111111] to-[#0a0a0a] relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+        backgroundImage: `repeating-linear-gradient(45deg, #C9A84C 0px, #C9A84C 1px, transparent 1px, transparent 60px)`,
+      }} />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-gold mb-4">Book Your Relaxation Today</h2>
-        <p className="font-body text-cream/60 text-base md:text-lg mb-10">Walk in or book ahead — we are ready for you</p>
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="h-px w-12 bg-gold/40" />
+          <div className="w-1 h-1 rotate-45 bg-gold" />
+          <div className="h-px w-12 bg-gold/40" />
+        </div>
+
+        <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-cream mb-4 leading-tight">
+          Book Your <span style={{
+            background: "linear-gradient(135deg, #C9A84C 0%, #F0D080 40%, #C9A84C 70%, #A0722A 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}>Relaxation</span>
+        </h2>
+        <p className="font-body text-cream/50 text-base md:text-lg mb-12 tracking-wide">
+          Experience luxury wellness at Vin Paradise • Walk-in or book your appointment today
+        </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={`tel:${PHONE}`}
             data-testid="final-cta-call"
-            className="flex items-center gap-2 px-10 py-3.5 border border-gold text-gold font-body rounded-full hover:bg-gold/10 transition-colors text-lg"
+            className="group flex items-center gap-3 px-8 py-4 border border-gold/50 text-gold font-body font-semibold rounded-full hover:bg-gold/10 hover:border-gold transition-all duration-300 text-base"
           >
-            <Phone className="w-5 h-5" /> Call Now
+            <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            Call Now
           </a>
           <a
             href={WHATSAPP_DEFAULT}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="final-cta-whatsapp"
-            className="flex items-center gap-2 px-10 py-3.5 bg-[#25D366] text-white font-body rounded-full hover:bg-[#20bd5a] transition-colors text-lg shadow-[0_0_20px_rgba(37,211,102,0.3)]"
+            className="group flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-body font-semibold rounded-full hover:bg-[#20bd5a] transition-all duration-300 text-base shadow-[0_8px_25px_rgba(37,211,102,0.3)] hover:shadow-[0_12px_35px_rgba(37,211,102,0.4)]"
           >
-            <WhatsAppIcon className="w-5 h-5" /> WhatsApp Now
+            <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            WhatsApp Now
           </a>
         </div>
+
+        <p className="font-body text-cream/40 text-xs tracking-widest uppercase mt-10">
+          Available Monday – Sunday, 9 AM – 9 PM
+        </p>
       </div>
     </section>
   );
@@ -125,92 +190,117 @@ export function Footer() {
   };
 
   return (
-    <footer data-testid="footer" className="bg-[#050505] py-16 px-6 md:px-12 lg:px-24 border-t border-gold/10">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Col 1 - Logo */}
-          <div>
-            <h3 className="font-heading text-gold text-xl mb-2">Vin Paradise</h3>
-            <p className="font-body text-cream/40 text-sm italic mb-3">Relax. Rejuvenate. Restore.</p>
-            <p className="font-body text-cream/40 text-xs leading-relaxed">
-              Nagarbhavi's most trusted premium wellness destination.
-            </p>
-          </div>
+    <footer data-testid="footer" className="bg-[#050505] relative overflow-hidden">
+      {/* Top border */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-          {/* Col 2 - Quick Links */}
-          <div>
-            <h4 className="font-body text-cream font-medium text-sm mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {navLinks.map((link) => {
-                const id = link.toLowerCase().replace(/\s/g, "-").replace("premium-services", "premium");
-                return (
-                  <li key={link}>
+      <div className="py-16 px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Col 1 - Brand */}
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-heading text-gold text-2xl mb-1">Vin Paradise</h3>
+                <div className="h-px w-12 bg-gradient-to-r from-gold to-transparent" />
+              </div>
+              <p className="font-body text-cream/50 text-sm leading-relaxed">
+                Premium spa & salon services for your body, mind & soul. Nagarbhavi's most trusted wellness destination.
+              </p>
+            </div>
+
+            {/* Col 2 - Quick Links */}
+            <div>
+              <h4 className="font-heading text-cream text-sm font-semibold mb-6 tracking-widest uppercase">Quick Links</h4>
+              <ul className="space-y-3">
+                {navLinks.map((link) => {
+                  const id = link.toLowerCase().replace(/\s/g, "-").replace("premium-services", "premium");
+                  return (
+                    <li key={link}>
+                      <button
+                        onClick={() => scrollTo(id === "home" ? "home" : id)}
+                        className="font-body text-cream/50 text-sm hover:text-gold transition-colors duration-300 relative group"
+                      >
+                        {link}
+                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {/* Col 3 - Services */}
+            <div>
+              <h4 className="font-heading text-cream text-sm font-semibold mb-6 tracking-widest uppercase">Services</h4>
+              <ul className="space-y-3">
+                {serviceNames.slice(0, 5).map((name) => (
+                  <li key={name}>
                     <button
-                      onClick={() => scrollTo(id === "home" ? "home" : id)}
-                      className="font-body text-cream/40 text-sm hover:text-gold transition-colors"
+                      onClick={() => scrollTo("services")}
+                      className="font-body text-cream/50 text-sm hover:text-gold transition-colors duration-300 relative group"
                     >
-                      {link}
+                      {name}
+                      <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
                     </button>
                   </li>
-                );
-              })}
-            </ul>
-          </div>
+                ))}
+              </ul>
+            </div>
 
-          {/* Col 3 - Services */}
-          <div>
-            <h4 className="font-body text-cream font-medium text-sm mb-4">Services</h4>
-            <ul className="space-y-2">
-              {serviceNames.map((name) => (
-                <li key={name}>
-                  <button
-                    onClick={() => scrollTo("services")}
-                    className="font-body text-cream/40 text-sm hover:text-gold transition-colors"
-                  >
-                    {name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 4 - Contact */}
-          <div>
-            <h4 className="font-body text-cream font-medium text-sm mb-4">Contact</h4>
-            <div className="space-y-3">
-              <p className="font-body text-cream/40 text-sm">
-                Vin Paradise Unisex Salon & Spa, Nagarbhavi, Bangalore 560072
-              </p>
-              <a href={`tel:${PHONE}`} className="font-body text-cream/40 text-sm hover:text-gold transition-colors block">
-                {PHONE}
-              </a>
-              <p className="font-body text-cream/40 text-sm">Mon–Sun: 9AM – 9PM</p>
+            {/* Col 4 - Contact Info */}
+            <div>
+              <h4 className="font-heading text-cream text-sm font-semibold mb-6 tracking-widest uppercase">Get In Touch</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-body text-cream/70 text-xs font-semibold uppercase tracking-wider text-gold mb-1">Address</p>
+                  <p className="font-body text-cream/50 text-sm leading-relaxed">
+                    Nagarbhavi, Bangalore 560072, India
+                  </p>
+                </div>
+                <div>
+                  <p className="font-body text-cream/70 text-xs font-semibold uppercase tracking-wider text-gold mb-1">Phone</p>
+                  <a href={`tel:${PHONE}`} className="font-body text-cream/50 text-sm hover:text-gold transition-colors">
+                    {PHONE}
+                  </a>
+                </div>
+                <div>
+                  <p className="font-body text-cream/70 text-xs font-semibold uppercase tracking-wider text-gold mb-1">Hours</p>
+                  <p className="font-body text-cream/50 text-sm">
+                    Mon–Sun: 9AM – 9PM
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gold/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-body text-cream/30 text-xs">
-            &copy; 2025 Vin Paradise Unisex Salon & Spa. All rights reserved.
-          </p>
-          <div className="flex gap-3">
-            <a
-              href={`tel:${PHONE}`}
-              data-testid="footer-call-btn"
-              className="flex items-center gap-2 px-5 py-2 border border-gold text-gold text-sm font-body rounded-full hover:bg-gold/10 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5" /> Call Now
-            </a>
-            <a
-              href={WHATSAPP_DEFAULT}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="footer-whatsapp-btn"
-              className="flex items-center gap-2 px-5 py-2 bg-[#25D366] text-white text-sm font-body rounded-full hover:bg-[#20bd5a] transition-colors shadow-[0_0_12px_rgba(37,211,102,0.3)]"
-            >
-              <WhatsAppIcon className="w-3.5 h-3.5" /> WhatsApp
-            </a>
+          {/* Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent my-8" />
+
+          {/* Bottom */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="font-body text-cream/40 text-xs leading-relaxed">
+              &copy; 2025 Vin Paradise Unisex Salon & Spa. All rights reserved. | Crafted for your wellness
+            </p>
+            <div className="flex gap-3">
+              <a
+                href={`tel:${PHONE}`}
+                data-testid="footer-call-btn"
+                className="group flex items-center gap-2 px-5 py-2.5 border border-gold/40 text-gold text-xs font-body font-semibold rounded-full hover:bg-gold/10 hover:border-gold transition-all duration-300"
+              >
+                <Phone className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                Call
+              </a>
+              <a
+                href={WHATSAPP_DEFAULT}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-whatsapp-btn"
+                className="group flex items-center gap-2 px-5 py-2.5 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] text-xs font-body font-semibold rounded-full hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
