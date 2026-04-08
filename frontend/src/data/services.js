@@ -3,7 +3,7 @@ export const services = [
     id: "deep-tissue",
     name: "Deep Tissue Massage",
     shortDesc: "Firm targeted massage releasing deep muscle tension and chronic knots",
-    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088648/WhatsApp_Image_2026-04-01_at_13.04.24_ahyk4p.jpg",
+    image: "https://elementsmassage.com/files/shared/EM_DeepTissueMassage.jpeg",
     extraImages: [
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
       "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
@@ -35,7 +35,7 @@ export const services = [
     id: "thai-massage",
     name: "Thai Massage",
     shortDesc: "Ancient healing with acupressure and stretching to energize your whole body",
-    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088583/WhatsApp_Image_2026-04-01_at_13.04.23_q1zyfh.jpg",
+    image: "https://t4.ftcdn.net/jpg/00/49/84/71/360_F_49847134_GDTYb3FKMNxHDPvZ35OlMPT6G3Wpfkpm.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80",
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
@@ -67,7 +67,7 @@ export const services = [
     id: "stress-relief",
     name: "Stress Relief Massage",
     shortDesc: "Full body relaxation massage that melts stress and restores inner calm",
-    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088550/WhatsApp_Image_2026-04-01_at_13.04.22_epukvu.jpg",
+    image: "https://sa1s3optim.patientpop.com/assets/images/provider/photos/2264275.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
@@ -99,7 +99,7 @@ export const services = [
     id: "pain-relief",
     name: "Pain Relief Massage",
     shortDesc: "Targeted therapy for back pain, neck pain and joint stiffness",
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80",
+    image: "https://img.freepik.com/free-photo/physiotherapist-performing-therapeutic-massage-male-client_23-2149143840.jpg?t=st=1775644052~exp=1775647652~hmac=73f148e8b8f202d3fbe618f0d81901e4319ba7311ca82a1ecee61b94f056f72e&w=1480",
     extraImages: [
       "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80",
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
@@ -129,9 +129,9 @@ export const services = [
   },
   {
     id: "four-hands",
-    name: "4 Hands Massage",
+    name: "Signature (4 Hands Massage)",
     shortDesc: "Two therapists in perfect sync — double the hands, double the bliss",
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
+    image: "https://static.spalopia.app/19b952c0-5466-53da-87d8-6c7a89059af4/s3fs-public/rfh-spa-treatments/masaje-4-manos.gif",
     extraImages: [
       "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
@@ -161,9 +161,9 @@ export const services = [
   },
   {
     id: "wine-massage",
-    name: "Wine Massage",
+    name: "Body Polish (wine massage)",
     shortDesc: "Antioxidant-rich wine extracts that nourish, hydrate and rejuvenate skin",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
+    image: "https://www.healthlandspa.com/uploads/eSuki964KkF2d7H6VJS5ECZgFqtieVPvJadGsXihTlaTUaZCwm1755240534.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
       "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
@@ -196,9 +196,9 @@ export const services = [
 export const premiumServices = [
   {
     id: "hamam-deep-tissue",
-    name: "Deep Tissue with Hamam",
+    name: "Deep Tissue Massage with Turkish Hamam",
     shortDesc: "The ultimate body ritual — authentic Turkish Hamam steam and scrub followed by powerful deep tissue massage. Complete detox and rejuvenation.",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
+    image: "https://omasra.com/cdn/shop/files/0J7A1006_1_1_1445x.jpg?v=1717337488",
     extraImages: [
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
@@ -230,9 +230,9 @@ export const premiumServices = [
   },
   {
     id: "thai-jacuzzi",
-    name: "Thai Massage with Jacuzzi",
+    name: "Thai Massage With Jacuzzi Bath (Inc. steam)",
     shortDesc: "Traditional Thai massage followed by soothing Jacuzzi soak — perfect combination of stretch, pressure and hydrotherapy for total renewal.",
-    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
+    image: "https://lh3.googleusercontent.com/p/AF1QipPU8X3Zhe6URxN7TnOLaHR0TW3t9NJYQbl0uRjV=s1360-w1360-h1020-rw",
     extraImages: [
       "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80",
@@ -288,12 +288,12 @@ export const testimonials = [
 ];
 
 export const galleryImages = [
-  "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
-  "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80",
-  "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
-  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
-  "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
-  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775645709/WhatsApp_Image_2026-04-08_at_16.22.44_jeropw.jpg",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775645709/WhatsApp_Image_2026-04-08_at_16.22.45_tisyxe.jpg",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775645708/WhatsApp_Image_2026-04-08_at_16.22.44_1_plkuv3.jpg",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088583/WhatsApp_Image_2026-04-01_at_13.04.23_q1zyfh.jpg",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088648/WhatsApp_Image_2026-04-01_at_13.04.24_ahyk4p.jpg",
+  "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088550/WhatsApp_Image_2026-04-01_at_13.04.22_epukvu.jpg",
 ];
 
 export const whyChooseData = [

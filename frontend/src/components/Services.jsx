@@ -315,7 +315,7 @@ export default function Services() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center space-y-5">
+        {/* <div className="mt-16 text-center space-y-5">
           <p className="text-cream/30 text-xs tracking-[0.3em] uppercase font-body">
             Prefer to speak with us?
           </p>
@@ -337,7 +337,7 @@ export default function Services() {
               <WhatsAppIcon /> WhatsApp Now
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <ServiceModal service={modalService} open={!!modalService} onClose={() => setModalService(null)} />
