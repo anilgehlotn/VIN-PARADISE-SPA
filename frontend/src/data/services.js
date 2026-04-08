@@ -3,7 +3,7 @@ export const services = [
     id: "deep-tissue",
     name: "Deep Tissue Massage",
     shortDesc: "Firm targeted massage releasing deep muscle tension and chronic knots",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
+    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088648/WhatsApp_Image_2026-04-01_at_13.04.24_ahyk4p.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
       "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
@@ -35,7 +35,7 @@ export const services = [
     id: "thai-massage",
     name: "Thai Massage",
     shortDesc: "Ancient healing with acupressure and stretching to energize your whole body",
-    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80",
+    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088583/WhatsApp_Image_2026-04-01_at_13.04.23_q1zyfh.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80",
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
@@ -67,7 +67,7 @@ export const services = [
     id: "stress-relief",
     name: "Stress Relief Massage",
     shortDesc: "Full body relaxation massage that melts stress and restores inner calm",
-    image: "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
+    image: "https://res.cloudinary.com/dqp0pkern/image/upload/v1775088550/WhatsApp_Image_2026-04-01_at_13.04.22_epukvu.jpg",
     extraImages: [
       "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80",
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",

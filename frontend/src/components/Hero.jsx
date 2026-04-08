@@ -100,226 +100,167 @@ const DiamondRule = () => (
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      data-testid="hero-section"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* Video Background */}
-      <div className="absolute inset-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Raleway:wght@200;300;400&display=swap');
+
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeDown {
+          from { opacity: 0; transform: translateY(-10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scrollPulse {
+          0%, 100% { opacity: 0.25; }
+          50%       { opacity: 0.7; }
+        }
+        .hero-anim-1 { animation: fadeUp 1s 0.3s ease both; }
+        .hero-anim-2 { animation: fadeUp 1s 0.55s ease both; }
+        .hero-anim-3 { animation: fadeUp 1s 0.75s ease both; }
+        .hero-anim-4 { animation: fadeUp 1s 0.9s ease both; }
+        .hero-anim-5 { animation: fadeUp 1s 1.05s ease both; }
+        .hero-anim-6 { animation: fadeUp 1s 1.25s ease both; }
+        .hero-anim-7 { animation: fadeUp 1s 1.45s ease both; }
+
+        .cta-btn-primary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 13px 32px;
+          border: 0.5px solid rgba(200,165,90,0.5);
+          color: rgba(200,165,90,0.9);
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          font-size: 10px;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          text-decoration: none;
+          background: transparent;
+          cursor: pointer;
+          transition: border-color 0.3s, color 0.3s, background 0.3s;
+        }
+        .cta-btn-primary:hover {
+          border-color: rgba(200,165,90,0.85);
+          color: rgba(220,185,100,1);
+          background: rgba(200,165,90,0.05);
+        }
+        .cta-btn-ghost {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 13px 28px;
+          border: none;
+          color: rgba(255,255,255,0.28);
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          font-size: 10px;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          text-decoration: none;
+          background: transparent;
+          cursor: pointer;
+          transition: color 0.3s;
+        }
+        .cta-btn-ghost:hover { color: rgba(255,255,255,0.6); }
+
+        .scroll-line {
+          width: 0.5px;
+          height: 36px;
+          background: linear-gradient(to bottom, rgba(200,165,90,0.4), transparent);
+          animation: scrollPulse 2.5s ease infinite;
+        }
+      `}</style>
+
+      {/* MOBILE: Top section with Kannada title */}
+      <section
+        id="home"
+        data-testid="hero-section"
+        className="md:hidden min-h-[50vh] flex items-center justify-center px-6 relative overflow-hidden bg-black"
+        style={{
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/35" />
+
+        {/* Content with relative positioning */}
+        <div
+          className="relative z-10"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            gap: "12px",
+          }}
+        >
+          <img
+            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1775639089/karnataka_images_gftixz.png"
+            alt="Karnataka"
+            width="45"
+            height="auto"
+            style={{
+              objectFit: "contain",
+            }}
+          />
+          <h1
+            data-testid="hero-heading"
+            className="font-heading text-gold"
+            style={{
+              background: "linear-gradient(160deg, #E8C97A 0%, #C9A84C 35%, #F0D890 55%, #BFA048 75%, #E8C97A 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              textShadow: "none",
+              fontSize: "clamp(32px, 8vw, 48px)",
+              fontWeight: 300,
+              fontFamily: "'Cormorant Garamond', serif",
+              lineHeight: 1.2,
+              textAlign: "center",
+              flexShrink: 1,
+              minWidth: 0,
+            }}
+          >
+            <span style={{ display: "block" }}>ವಿನ್ ಪ್ಯಾರಡೈಸ್</span>
+            <span
+              style={{
+                display: "block",
+                fontSize: "clamp(13px, 4vw, 18px)",
+                letterSpacing: "0.12em",
+                marginTop: "8px",
+                color: "rgba(232,201,122,0.85)",
+                WebkitTextFillColor: "rgba(232,201,122,0.85)",
+                background: "none",
+              }}
+            >
+              ಯೂನಿಸೆಕ್ಸ್ ಸಲೂನ್ & ಸ್ಪಾ
+            </span>
+          </h1>
+        </div>
+      </section>
+
+      {/* MOBILE: Video section */}
+      <section className="md:hidden bg-black w-full">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ aspectRatio: "832/464" }}
+          className="w-full object-cover"
+        >
           <source src={VIDEO_URL} type="video/mp4" />
         </video>
-        {/* Dark overlay + vignette */}
-        <div className="absolute inset-0 bg-[#080808]/78" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, rgba(0,0,0,0.65) 100%)",
-          }}
-        />
-      </div>
+      </section>
 
-      {/* Top navigation bar */}
-      <div
-        className="absolute top-0 left-0 right-0 flex items-center justify-between px-12 py-7 z-20"
-        style={{ animation: "fadeDown 1.2s ease both" }}
-      >
-        <span
-          style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 200,
-            fontSize: "10px",
-            letterSpacing: "0.35em",
-            color: "rgba(200,165,90,0.55)",
-            textTransform: "uppercase",
-          }}
-        >
-          Est. 2019 · Bangalore
-        </span>
-        <nav className="hidden md:flex gap-9">
-          {["Services", "About", "Gallery", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              style={{
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 300,
-                fontSize: "10px",
-                letterSpacing: "0.3em",
-                color: "rgba(255,255,255,0.3)",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                transition: "color 0.3s",
-              }}
-              onMouseEnter={(e) => (e.target.style.color = "rgba(200,165,90,0.75)")}
-              onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.3)")}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-      </div>
-
-      {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6">
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Raleway:wght@200;300;400&display=swap');
-
-          @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(18px); }
-            to   { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to   { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes scrollPulse {
-            0%, 100% { opacity: 0.25; }
-            50%       { opacity: 0.7; }
-          }
-          .hero-anim-1 { animation: fadeUp 1s 0.3s ease both; }
-          .hero-anim-2 { animation: fadeUp 1s 0.55s ease both; }
-          .hero-anim-3 { animation: fadeUp 1s 0.75s ease both; }
-          .hero-anim-4 { animation: fadeUp 1s 0.9s ease both; }
-          .hero-anim-5 { animation: fadeUp 1s 1.05s ease both; }
-          .hero-anim-6 { animation: fadeUp 1s 1.25s ease both; }
-          .hero-anim-7 { animation: fadeUp 1s 1.45s ease both; }
-
-          .cta-btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 13px 32px;
-            border: 0.5px solid rgba(200,165,90,0.5);
-            color: rgba(200,165,90,0.9);
-            font-family: 'Raleway', sans-serif;
-            font-weight: 300;
-            font-size: 10px;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            text-decoration: none;
-            background: transparent;
-            cursor: pointer;
-            transition: border-color 0.3s, color 0.3s, background 0.3s;
-          }
-          .cta-btn-primary:hover {
-            border-color: rgba(200,165,90,0.85);
-            color: rgba(220,185,100,1);
-            background: rgba(200,165,90,0.05);
-          }
-          .cta-btn-ghost {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 13px 28px;
-            border: none;
-            color: rgba(255,255,255,0.28);
-            font-family: 'Raleway', sans-serif;
-            font-weight: 300;
-            font-size: 10px;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            text-decoration: none;
-            background: transparent;
-            cursor: pointer;
-            transition: color 0.3s;
-          }
-          .cta-btn-ghost:hover { color: rgba(255,255,255,0.6); }
-
-          .scroll-line {
-            width: 0.5px;
-            height: 36px;
-            background: linear-gradient(to bottom, rgba(200,165,90,0.4), transparent);
-            animation: scrollPulse 2.5s ease infinite;
-          }
-        `}</style>
-
-        {/* Eyebrow */}
-        <p
-          className="hero-anim-1"
-          style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 200,
-            fontSize: "10px",
-            letterSpacing: "0.5em",
-            color: "rgba(200,165,90,0.55)",
-            textTransform: "uppercase",
-            marginBottom: "28px",
-          }}
-        >
-          Unisex Salon &amp; Spa
-        </p>
-
-        {/* Rule above */}
-        <div className="hero-anim-2" style={{ marginBottom: "36px" }}>
-          <DiamondRule />
-        </div>
-
-        {/* Kannada title */}
-        <h1
-          data-testid="hero-heading"
-          className="hero-anim-3"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 300,
-            fontSize: "clamp(64px, 10vw, 120px)",
-            lineHeight: 1.0,
-            letterSpacing: "0.04em",
-            background:
-              "linear-gradient(160deg, #E8C97A 0%, #C9A84C 35%, #F0D890 55%, #BFA048 75%, #E8C97A 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            marginBottom: "18px",
-          }}
-        >
-          ವಿನ್ ಪ್ಯಾರಡೈಸ್
-        </h1>
-
-        {/* English subtitle */}
-        {/* <p
-          className="hero-anim-4"
-          style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 200,
-            fontSize: "clamp(10px, 1.4vw, 13px)",
-            letterSpacing: "0.55em",
-            color: "rgba(255,255,255,0.22)",
-            textTransform: "uppercase",
-            marginBottom: "36px",
-          }}
-        >
-          Vin Paradise
-        </p> */}
-
-        {/* Rule below */}
-        <div className="hero-anim-5" style={{ marginBottom: "36px" }}>
-          <DiamondRule />
-        </div>
-
-        {/* Tagline */}
-        {/* <p
-          className="hero-anim-6"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontStyle: "italic",
-            fontWeight: 300,
-            fontSize: "clamp(14px, 1.8vw, 18px)",
-            color: "rgba(220,190,120,0.45)",
-            letterSpacing: "0.12em",
-            marginBottom: "52px",
-          }}
-        >
-          Where luxury meets artistry
-        </p> */}
-
+      {/* MOBILE: Bottom section with CTA and scroll indicator */}
+      <section className="md:hidden bg-black min-h-screen flex flex-col items-center justify-center px-6 relative">
         {/* CTA buttons */}
-        {/* <div
-          className="hero-anim-7 flex items-center gap-0"
-          style={{ gap: "0" }}
-        >
+        <div className="flex items-center gap-0 mb-12">
           <a className="cta-btn-primary" href={`https://wa.me/${WHATSAPP_DEFAULT}`}>
             <WhatsAppIcon />
             Book Now
@@ -338,28 +279,181 @@ export default function Hero() {
             <Phone size={12} strokeWidth={1.2} />
             Call Us
           </a>
-        </div> */}
-      </div>
+        </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2.5"
-        style={{ animation: "fadeUp 1s 1.7s ease both" }}
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5">
+          <span
+            style={{
+              fontFamily: "'Raleway', sans-serif",
+              fontWeight: 200,
+              fontSize: "9px",
+              letterSpacing: "0.45em",
+              color: "rgba(255,255,255,0.18)",
+              textTransform: "uppercase",
+            }}
+          >
+            Scroll
+          </span>
+          <div className="scroll-line" />
+        </div>
+      </section>
+
+      {/* LAPTOP: Fullscreen hero with video background */}
+      <section
+        id="home"
+        data-testid="hero-section"
+        className="hidden md:flex relative min-h-screen items-center justify-center overflow-hidden"
       >
-        <span
-          style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 200,
-            fontSize: "9px",
-            letterSpacing: "0.45em",
-            color: "rgba(255,255,255,0.18)",
-            textTransform: "uppercase",
-          }}
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src={VIDEO_URL} type="video/mp4" />
+          </video>
+          {/* Dark overlay + vignette */}
+          <div className="absolute inset-0 bg-[#080808]/78" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, rgba(0,0,0,0.65) 100%)",
+            }}
+          />
+        </div>
+
+        {/* Top navigation bar */}
+        <div
+          className="absolute top-0 left-0 right-0 flex items-center justify-between px-12 py-7 z-20"
+          style={{ animation: "fadeDown 1.2s ease both" }}
         >
-          Scroll
-        </span>
-        <div className="scroll-line" />
-      </div>
-    </section>
+          <span
+            style={{
+              fontFamily: "'Raleway', sans-serif",
+              fontWeight: 200,
+              fontSize: "10px",
+              letterSpacing: "0.35em",
+              color: "rgba(200,165,90,0.55)",
+              textTransform: "uppercase",
+            }}
+          >
+            Est. 2019 · Bangalore
+          </span>
+          <nav className="flex gap-9">
+            {["Services", "About", "Gallery", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 300,
+                  fontSize: "10px",
+                  letterSpacing: "0.3em",
+                  color: "rgba(255,255,255,0.3)",
+                  textDecoration: "none",
+                  textTransform: "uppercase",
+                  transition: "color 0.3s",
+                }}
+                onMouseEnter={(e) => (e.target.style.color = "rgba(200,165,90,0.75)")}
+                onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.3)")}
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* Main content overlay */}
+        <div className="relative z-10 flex flex-col items-center text-center px-6">
+          {/* Eyebrow */}
+          <p
+            className="hero-anim-1"
+            style={{
+              fontFamily: "'Raleway', sans-serif",
+              fontWeight: 200,
+              fontSize: "10px",
+              letterSpacing: "0.5em",
+              color: "rgba(200,165,90,0.55)",
+              textTransform: "uppercase",
+              marginBottom: "28px",
+            }}
+          >
+            Unisex Salon &amp; Spa
+          </p>
+
+          {/* Rule above */}
+          <div className="hero-anim-2" style={{ marginBottom: "36px" }}>
+            <DiamondRule />
+          </div>
+
+          {/* Kannada title */}
+          <h1
+            data-testid="hero-heading"
+            className="hero-anim-3 md:hidden"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 300,
+              fontSize: "clamp(64px, 10vw, 120px)",
+              lineHeight: 1.0,
+              letterSpacing: "0.04em",
+              background:
+                "linear-gradient(160deg, #E8C97A 0%, #C9A84C 35%, #F0D890 55%, #BFA048 75%, #E8C97A 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              marginBottom: "18px",
+            }}
+          >
+            ವಿನ್ ಪ್ಯಾರಡೈಸ್
+          </h1>
+
+          {/* Rule below */}
+          <div className="hero-anim-5" style={{ marginBottom: "36px" }}>
+            <DiamondRule />
+          </div>
+
+          {/* CTA buttons */}
+          <div className="hero-anim-7 flex items-center gap-0" style={{ gap: "0" }}>
+            <a className="cta-btn-primary" href={`https://wa.me/${WHATSAPP_DEFAULT}`}>
+              <WhatsAppIcon />
+              Book Now
+            </a>
+
+            <div
+              style={{
+                width: "0.5px",
+                height: "20px",
+                background: "rgba(255,255,255,0.1)",
+                margin: "0 4px",
+              }}
+            />
+
+            <a className="cta-btn-ghost" href={`tel:${PHONE}`}>
+              <Phone size={12} strokeWidth={1.2} />
+              Call Us
+            </a>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2.5"
+          style={{ animation: "fadeUp 1s 1.7s ease both" }}
+        >
+          <span
+            style={{
+              fontFamily: "'Raleway', sans-serif",
+              fontWeight: 200,
+              fontSize: "9px",
+              letterSpacing: "0.45em",
+              color: "rgba(255,255,255,0.18)",
+              textTransform: "uppercase",
+            }}
+          >
+            Scroll
+          </span>
+          <div className="scroll-line" />
+        </div>
+      </section>
+    </>
   );
 }
