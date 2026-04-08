@@ -266,23 +266,23 @@ export const premiumServices = [
 
 export const testimonials = [
   {
-    name: "Priya M.",
-    text: "The Hamam + Deep Tissue combo was absolutely divine. Best spa experience I have had in Bangalore!",
+    name: "Deveraj Nk",
+    text: "This is my second time in vin paradise and I took 1hrs session. The therapist was Sonu. This time I had an awesome experience with her. She is really polite and professional.",
     rating: 5,
   },
   {
-    name: "Rahul K.",
-    text: "Thai Massage with Jacuzzi is mind-blowing. The 90 min session was worth every rupee. Highly recommend!",
+    name: "Kiran Suresh",
+    text: "I have visited vin paradise today it's very good place to visit nice environment receptionist are very good staff are very polite one of the best spa to visit.",
     rating: 5,
   },
   {
-    name: "Sneha R.",
-    text: "Tried the Wine Massage — skin felt so soft and glowing after. Staff is very professional and hygienic.",
+    name: "Muthu gowda gowda",
+    text: "I had a great massage at Vin Paradise Unisex Salon & Spa. Aishu is one of the best massage therapists I have ever had. She worked out the knots in my neck and shoulders. Great job, I highly recommend the spa.",
     rating: 5,
   },
   {
-    name: "Arjun S.",
-    text: "4 Hands Massage is unreal. Two therapists in sync felt like pure magic. Will come back every month!",
+    name: "Pradeep Pradi",
+    text: "Vin paradise unisex salon and spa is very good, the welcome is warm and the hospitality is very nice, the jacuzzi experience was wonderful, therapist sonu is very good. Soft spoken and caring.",
     rating: 5,
   },
 ];

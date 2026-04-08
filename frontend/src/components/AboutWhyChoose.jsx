@@ -147,6 +147,7 @@ export function AboutUs() {
 
         {/* Kannada + English title */}
         <p className="font-heading text-2xl md:text-3xl text-gold mb-1">ವಿನ್ ಪ್ಯಾರಡೈಸ್</p>
+        <p className="font-heading text-sm md:text-base text-gold/70 mb-4">ಯೂನಿಸೆಕ್ಸ್ ಸಲೂನ್ & ಸ್ಪಾ</p>
         <p className="font-heading text-lg md:text-xl text-cream/60 mb-6">
           Where Luxury Meets Care
         </p>
