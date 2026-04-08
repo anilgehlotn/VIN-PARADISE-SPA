@@ -103,7 +103,7 @@ export function Contact() {
           <div className="rounded-xl overflow-hidden border border-gold/20 h-[350px] md:h-[450px] shadow-[0_8px_40px_rgba(201,168,76,0.1)] hover:shadow-[0_12px_50px_rgba(201,168,76,0.15)] transition-shadow duration-300">
             <iframe
               title="Vin Paradise Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0506835524227!2d77.6314!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c5f5f5f5f5%3A0x5c5f5f5f5f5f5f5f!2sVin%20Paradise%20Spa%2C%20Bangalore!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.248!2d77.5205797!3d12.9617111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ffa801e00c1%3A0xe35343d2efcc0779!2sVin%20Paradise%20Unisex%20Salon%20%26%20Spa%20Best%20Spa%20in%20Nagarbhavi!5e0!3m2!1sen!2sin!4v1712608800000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
